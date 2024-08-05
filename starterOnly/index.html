@@ -54,7 +54,8 @@
         <div class="content">
           <button class="close"></button>
           <div class="modal-body">
-            <form novalidate
+            <form
+              novalidate
               name="reserve"
               action="index.html"
               method="get"
@@ -69,6 +70,7 @@
                   name="first"
                   minlength="2"
                 /><br />
+                <span id="error-name" class="error-message-style"></span>
               </div>
               <div class="formData">
                 <label for="last">Nom</label><br />
@@ -79,6 +81,7 @@
                   name="last"
                   minlength="2"
                 /><br />
+                <span id="error-lastName" class="error-message-style"></span>
               </div>
               <div class="formData">
                 <label for="email">E-mail</label><br />
@@ -88,6 +91,7 @@
                   id="email"
                   name="email"
                 /><br />
+                <span id="error-email" class="error-message-style"></span>
               </div>
               <div class="formData">
                 <label for="birthdate">Date de naissance</label><br />
@@ -97,12 +101,14 @@
                   id="birthdate"
                   name="birthdate"
                 /><br />
+                <span id="birth-error" class="error-message-style"></span>
               </div>
               <div class="formData">
                 <label for="quantity"
                   >À combien de tournois GameOn avez-vous déjà participé
                   ?</label
                 ><br />
+
                 <input
                   type="number"
                   class="text-control"
@@ -111,11 +117,12 @@
                   min="0"
                   max="99"
                 />
+                <span id="error-nbr" class="error-message-style"></span>
               </div>
-              <p class="text-label">
-                A quel tournoi souhaitez-vous participer cette année ?
-              </p>
               <div class="formData">
+                <p class="text-label">
+                  A quel tournoi souhaitez-vous participer cette année ?
+                </p>
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -182,14 +189,14 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
+                <br />
+                <span id="location-error" class="error-message-style"></span>
               </div>
-
               <div class="formData">
                 <input
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
-                  checked
                   required
                 />
                 <label class="checkbox2-label" for="checkbox1">
@@ -197,10 +204,13 @@
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
                 <br />
+                <span id="checkbox-error" class="error-message-style"></span>
+              </div>
+              <div class="formData">
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
-                 Je souhaite être prévenu des prochains évènements.
+                  Je souhaite être prévenu des prochains évènements.
                 </label>
                 <br />
               </div>

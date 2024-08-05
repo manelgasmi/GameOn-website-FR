@@ -68,6 +68,16 @@ img {
   display: none;
 }
 
+.error-message-style {
+  color: rgba(255, 78, 96, 1);
+  font-size: 10px;
+  text-align: left;
+}
+
+.error-message-input {
+  border: rgba(255, 78, 96, 1) solid 2px;
+}
+
 @media screen and (max-width: 768px) {
   .topnav a {display: none;}
   .topnav a.icon {
