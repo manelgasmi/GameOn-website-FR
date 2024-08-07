@@ -35,10 +35,10 @@ img {
   margin: 3.5%;
 }
 .header-logo {
-    float: left;
+  float: left;
 }
 .main-navbar {
-    float: right;
+  float: right;
 }
 .topnav a {
   float: left;
@@ -79,7 +79,9 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav a {display: none;}
+  .topnav a {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
@@ -87,7 +89,9 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -100,16 +104,16 @@ img {
   }
 }
 
-
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
+@media screen and (max-width: 540px) {
+  .topnav a {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
     margin-top: -15px;
   }
-} 
+}
 
 main {
   font-size: 130%;
@@ -121,8 +125,6 @@ main {
   margin: 1px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
-
-
 }
 
 .modal-btn {
@@ -325,7 +327,7 @@ input[data-error]::after {
   content: " ";
   height: 33px;
   width: 3px;
-  top:0;
+  top: 0;
   background-color: #fff;
 }
 .close:before {
@@ -403,9 +405,16 @@ input[data-error]::after {
   z-index: 99;
 }
 
-/* Hide the items when the select box is closed: */
-.select-hide {
-  display: none;
+.hidden {
+  display: none !important;
+}
+
+.btn-close-thankYouMessage {
+  width: 182px;
+  height: 40px;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: rgba(254, 20, 47, 1);
 }
 
 .select-items div:hover,
@@ -417,6 +426,23 @@ input[data-error]::after {
   font-weight: normal;
   font-size: 16px;
 }
+
+#thankYouMessage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+#thankYouMessage p {
+  font-weight: 400;
+  font-size: 36px;
+  min-height: 40rem;
+  align-items: center;
+  display: flex;
+}
+
 .hero-section {
   min-height: 93vh;
   border-radius: 10px;
@@ -539,4 +565,3 @@ footer {
     opacity: 1;
   }
 }
-
