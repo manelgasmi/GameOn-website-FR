@@ -1,3 +1,24 @@
+// DOM Elements
+const modalbg = document.querySelector(".bground");
+const modalBtn = document.querySelectorAll(".modal-btn");
+const formData = document.querySelectorAll(".formData");
+const closeButtons = document.querySelectorAll(".close-btn");
+// launch modal event
+modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
+
+// Close modal event
+closeButtons.forEach((btn) => btn.addEventListener("click", closeModal));
+
+// launch modal form
+function launchModal() {
+  modalbg.style.display = "block";
+}
+
+// Close modal form
+function closeModal() {
+  modalbg.style.display = "none";
+}
+
 // applicate the responsive in the topnav
 function editNav() {
   var x = document.getElementById("myTopnav");
@@ -8,31 +29,9 @@ function editNav() {
   }
 }
 
-// DOM Elements
-const modalbg = document.querySelector(".bground");
-const modalBtn = document.querySelectorAll(".modal-btn");
-const formData = document.querySelectorAll(".formData");
-const closeButtons = document.querySelectorAll(".close-btn");
-// launch modal event
-modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-
-// launch modal form
-function launchModal() {
-  modalbg.style.display = "block";
-}
-
-// Close modal event
-closeButtons.forEach((btn) => btn.addEventListener("click", closeModal));
-
-// Close modal form
-function closeModal() {
-  modalbg.style.display = "none";
-}
-
 // form validation
 function validate(event) {
   event.preventDefault();
-  
 
   // First name validation
   // Retrieving DOM Elements
@@ -86,6 +85,7 @@ function validate(event) {
     emailInput.classList.add("error-message-input");
     formHasError = true;
   }
+
   // date of birth validation
   const birthdateInput = document.getElementById("birthdate");
   const birthdateError = document.getElementById("birth-error");
