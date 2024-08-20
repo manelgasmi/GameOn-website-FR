@@ -74,7 +74,7 @@ function validate(event) {
   const emailError = document.getElementById("error-email");
   let email = emailInput.value;
   // This is a regular expression to check if the email address respect this format
-  let emailRegExp = new RegExp("[a-z0-9._-]+@[a-z0-9._-]+.[a-z0-9._-]+");
+  let emailRegExp = new RegExp(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]{2,}$/);
   // the first condition does not appears the error message
   if (emailRegExp.test(email)) {
     emailError.innerHTML = "";
